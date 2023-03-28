@@ -1,5 +1,5 @@
 const pUtente = prompt('Inserisci la parola chiave')
-const parola = 'ccc'
+const parola = 'palindroma'
 
 
 let confermaParola = (parola === pUtente) ? 'Buon divertimento' : alert('Mi dispiace ma non puoi giocare')   
@@ -10,29 +10,41 @@ console.log(confermaParola)
 
 
 if(confermaParola){
+
+    const pariDis = prompt('Pari o dispari');
+    const pari = 'pari'
+    const dispari = 'dispari'
+
+    const paDi = (pariDis === pari) ? 'Hai scelto pari' :  'Hai scelto dispari'
+    console.log(paDi);
+
+
     const nUtente =  parseInt(prompt('Inserisci un numero da 1 a 5'))
-    console.log('numero inserito da utente',nUtente)
     
-    const valNumb = parseInt(parDis('2','4'))
+    const valNumb = nUtente
     console.log(valNumb);
+    
 
-    const numbUtente = (valNumb === nUtente) ? 'hai scelto pari' : 'hai perso';
-    console.log('valore', numbUtente)
-
-        function parDis(p,p){
-           let pari = []
-           pari [0] = 2
-           pari [1] = 4
-           console.log('valore pari', pari);
-           return pari
-    } 
-
-    const getRandom = getRandomnNumber(1,5)
+    const getRandom = getRanPc(1,5)
     console.log('numero random pc',getRandom);
-    function getRandomnNumber(min, max){
-    const randomNumber = Math.floor(Math.random() * (max - min + 1) + min )
-    return randomNumber
-}}
+
+
+    function getRanPc(min, max){
+        const randomNumber = Math.floor(Math.random() * (max - min + 1) + min )
+        return randomNumber
+    }
+
+    const sommaTot = sommaNum(getRandom,valNumb)
+    console.log(sommaTot);
+
+    function sommaNum(getRandom, valNumb){
+        const somma = getRandom + valNumb;
+        return somma
+    }
+
+    const endgame = !(sommaTot % 2) ? 'hai vinto' : 'Ha vinto il pc'
+    console.log(endgame);
+}
 
 
 
