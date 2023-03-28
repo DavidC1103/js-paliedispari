@@ -27,5 +27,12 @@ if(confermaParola){
            return pari
     } 
 
-    
-}
+    const getRandom = getRandomnNumber(1,5)
+    console.log('numero random pc',getRandom);
+    function getRandomnNumber(min, max){
+    const randomNumber = Math.floor(Math.random() * (max - min + 1) + min )
+    return randomNumber
+}}
+
+
+
