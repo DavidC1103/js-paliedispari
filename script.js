@@ -1,10 +1,31 @@
 const pUtente = prompt('Inserisci la parola chiave')
-const parola = 'Palindroma'
+const parola = 'ccc'
 
 
-const confermaParola = (parola === pUtente) ? alert('Buon divertimento') : alert('Mi dispiace ma non puoi giocare')   
+let confermaParola = (parola === pUtente) ? 'Buon divertimento' : alert('Mi dispiace ma non puoi giocare')   
 
 console.log(confermaParola)
-console.log(parola)
-console.log(pUtente)
 
+
+
+
+if(confermaParola){
+    const nUtente =  parseInt(prompt('Inserisci un numero da 1 a 5'))
+    console.log('numero inserito da utente',nUtente)
+    
+    const valNumb = parseInt(parDis('2','4'))
+    console.log(valNumb);
+
+    const numbUtente = (valNumb === nUtente) ? 'hai scelto pari' : 'hai perso';
+    console.log('valore', numbUtente)
+
+        function parDis(p,p){
+           let pari = []
+           pari [0] = 2
+           pari [1] = 4
+           console.log('valore pari', pari);
+           return pari
+    } 
+
+    
+}
